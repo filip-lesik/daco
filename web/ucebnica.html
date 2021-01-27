@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tvorba webových stránok</title>
+	<style>
+		body {
+			font-family: Arial;
+			font-size: 12px;
+		}
+		h1 {
+			font-size: 2.5em;
+		}
+		h1, h2 {
+			font-variant: small-caps;
+			background-color: black;
+			color: white;
+		}
+		h3, h4 {
+			font-style: italic;
+		}		
+		a {
+			text-decoration:none;
+			color: green;
+			font-weight:bold;			
+		}
+		a:hover {
+			text-decoration:underline;
+			color: darkgreen;
+		}	
+		p {
+			text-align: justify;
+		}
+		#uvod, #css, #odkazy {
+			background-color: #f2ffe6;
+		}
+		
+		header {
+			text-align: center;
+		}
+		
+		nav {
+			background-color: darkgreen;			
+			padding: 10px 0px;
+			color: white;			
+		}
+		
+		nav a {
+			color: white;
+			font-weight: bold;
+			padding: 9px;			
+		}
+		
+		nav a:hover {
+			background-color: white;
+			color: darkgreen;
+			text-decoration: none;
+		}
+		
+		section {margin: 0px; padding: 0px 0px 10px 0px;}
+		
+		section p {margin: 0px 5px;}
+		section h2 {margin: 0px 0px; padding: 5px;}
+		
+		aside {
+			background-color: darkgreen;
+			padding: 10px;			
+		}
+		aside div {
+			border: 1px solid white;
+			color: white;
+			margin: 2px 0px;
+			padding: 10px;
+			width: 120px;
+			height: 100px;			
+		}
+		
+		footer {
+			background-color: gray;
+			text-align: center;
+			margin: 0px;
+			padding: 10px;
+			color: white;
+		}
+		
+		footer a {
+			color: white;
+		}
+		
+		footer a:hover {
+			color: white;
+		}
+	</style>
+</head>  
+<body>	
+	<header>
+		<h1>Tvorba webových stránok</h1>
+		<div>Abstrakt: V tejto učebnici sa naučíte vytvárať webové stránky, vhladať  na ne texty, obrázky, štruktúrovať texty a definovať kaskádové štýly.</div>
+	</header>
+	
+	<nav><a href="#uvod">Úvod</a> <a href="#struktura">Štruktúrovanie textu na webovej stránke</a> <a href="#css">Úvod do kaskádových štýlov</a> <a href="#obrazky">Obrázky</a> <a href="#odkazy">Odkazy</a></nav>
+	
+	<section id="uvod">
+		<h2>1. Úvod</h2>
+		<p>S webovými stránkami (alebo HTML stránkami) sa dnes stretávame denne: hľadáme na nich informácie, komunikujeme s kamarátmi, nakupujeme v online obchodoch, počúvame hudbu, ... Webové stránky majú školy, mestá, osoby, banky, obchody ... </p>
+		<p>Webová stránka je kombinácia textu, obrázkov, animácií, hypertextových odkazov a ďalších objektov, ktoré sú webové prehliadače schopné zobraziť. Vytvoriť webovú stránku znamená vytvoriť jej obsah („vložiť “ texty, obrázky, tabuľky, odkazy a ďalšie spomínané objekty) a rozhodnúť, akým spôsobom sa bude tento obsah zobrazovať, t.j. ako budú jednotlivé objekty na stránke rozložené, aké budú mať vlastnosti, napr. aké farby použijeme, aký druh, štýl či veľkosť písma, riadkovanie, medzery medzi jednotlivými prvkami na stránke, atď.</p>
+		<h3>1.1 Zdrojový kód stránky, jazyk HTML</h3>
+		<p>Webová stránka je v skutočnosti obyčajný textový súbor, v ktorom je pomocou špeciálnych značiek popísané, čo sa má na webovej stránke zobraziť a ako sa to má zobraziť – tzv. zdrojový kód stránky.</p>
+		<p>Webovú stránku môžeme vytvárať dvoma spôsobmi:</p>
+		<ul>
+			<li>priamo (pomocou vhodných nástrojov) vkladáme do stránky texty, obrázky, či iné objekty a nastavujeme ich vzhľad. Môžeme to prirovnať k tvorbe textového dokumentu v prostrediach ako MS Word, Libre Office …. V priebehu vytvárania stránky ju už vidíme tak, ako bude vyzerať vo webovom prehliadači. Takýmto spôsobom si môžeme vytvoriť stránku napr. pomocou <a href="https://sites.google.com">sites.google.com</a>, <a href="https://www.estranky.sk/">estranky.sk</a> či <a href="https://www.webnode.sk/">webnode.sk</a>. </li>
+			<li>vytvárame zdrojový kód stránky, teda len popisujeme, aké objekty (texty, obrázky, odkazy, ...) budú na stránke a akým spôsobom sa budú zobrazovať.</li>
+		</ul>
+		<p><strong>Úloha 1.1:</strong> V prehliadači otvorte nasledujúce stránky <a href="http://www.aupark.sk/">aupark.sk</a>, <a href="https://www.fll.sk/">www.fll.sk</a> a zobrazte pre obe zdrojový kód (v prehliadačoch Chrome, MozillaFirefox aj MS Edge na to môžeme použiť klávesovú skratku  Ctrl+U alebo F12) . </p>
+		<ul>
+			<li>Preskúmajte ho. Viete v ňom nájsť texty, ktoré ste videli priamo na stránke v prehliadači?</li>
+			<li>Všímajte si texty obalené v zátvorkách &lt;&gt;, napr. &lt;head&gt;. Nájdite aspoň 10 rôznych takýchto značiek. Ktoré z nich sa nachádzajú v oboch zdrojových kódoch?</li>
+		</ul>
+		<p>Všimnite si, že, mnohé značky sa vyskytujú v kóde v dvoch tvaroch: &lt;head&gt; a &lt;/head&gt;, alebo &lt;title&gt;  a &lt;/title&gt;. Nájdite v kódoch oboch stránok značky &lt;/body&gt;, &lt;/html&gt;. Kde v rámci súboru sa nachádzajú?</p>
+		<p>V zdrojových kódoch stránok z Úlohy 1.1 sme mohli vidieť nasledujúce značky: &lt;!DOCTYPE html&gt;, &lt;html&gt; a &lt;/html&gt;, &lt;head&gt; a &lt;/head&gt;, &lt;title&gt; a &lt;/title&gt;, &lt;meta charset="utf-8"&gt;, &lt;script&gt; a &lt;/script&gt;, &lt;body&gt; a &lt;/body&gt;, &lt;div&gt; a &lt;/div&gt; a veľa ďalších. Všetky tieto značky sú prvkami tzv. značkovacieho jazyka HTML.</p>
+		<p>HTML (HyperText Markup Language) je značkovací jazyk určený na definovanie štruktúry a vzhľadu webových dokumentov. Tvoria ho značky, pomocou ktorých definujeme prvky (elementy) stránky a ich rozmiestnenie na stránke. Jazyk HTML nie je programovací jazyk, ani nie je určený na tvorbu či spracovanie textu. V tejto učebnici sa budeme zaoberať jazykom HTML vo verzii HTML5.</p>
+		<p><strong>Úloha 1.2:</strong> Pozrite si zdrojový kód stránky svojej školy a nájdite v ňom predchádzajúce značky.</p>
+		...
+	</section>  
+  
+	<section id="struktura">
+		<h2>2 Štruktúrovanie textu na webovej stránke </h2>
+		<h3>2.1 Nadpisy, odseky - blokové elementy</h3>
+		<p>Keď vytvárame nejaký textový dokument, zvykneme text v ňom rozčleňovať do odsekov.</p>
+		<p><strong>Príklad 2.1:</strong>Pokračujme v tvorbe stránky IT Pizza. Do elementu &lt;body&gt; za informácie o ponuke pizzerie pridáme a) informácie o aktuálne prebiehajúcich akciách, b) kontaktné informácie. Ponuku, akcie a kontaktné informácie dáme v zdrojovom kóde na nový riadok (prípadne oddelíme prázdnym riadkom).</p>
+		...
+		<p>Na vytvorenie nového odseku nestačí v zdrojovom kóde stránky prejsť na nový riadok, ani vytvoriť medzi odsekmi prázdne riadky. Odsek v jazyku HTML definujeme pomocou elementu &lt;p&gt;&lt;/p&gt;, pričom obsahom tohto elementu je vlastne text odseku. Neskôr uvidíme, že obsahom odseku môže byť nielen text, ale napr. aj obrázok.</p>
+		<p><strong>Príklad 2.2:</strong> Opravíme zdrojový kód stránky IT Pizza použitím elementu &lt;p&gt;.</p>
+		...
+		<h3>2.2 Riadkové elementy</h3>
+		<p>Riadkové elementy používame zväčša na nejaký druh zvýraznenia menšej časti textu (slovo, veta) v rámci blokového elementu.</p>
+		...
+		<p>V nasledujúcej tabuľke uvádzame zoznam a popis niektorých riadkových elementov. Kompletný zoznam elementov na formátovanie môžeme nájsť v technickej špecifikácii štandardu HTML5 alebo na stránke <a href="http://www.w3schools.com/tags/default.asp">w3schools.com</a>.</p>
+		...
+	</section>
+
+	<section id="css">
+		<h2>3 Úvod do kaskádových štýlov</h2>
+		<p>V predchádzajúcich častiach sme vytvorili základnú štruktúru stránky IT Pizza, ale bez zmeny vzhľadu. Aktuálnym trendom tvorby webových stránok je vytváranie vzhľadu len pomocou tzv. kaskádových štýlov.</p>
+		<p>Kaskádové štýly, skrátene len štýly (CSS - Cascading Style Sheets) popisujú spôsob zobrazenia HTML elementov na obrazovke počítača či v inom médiu (napr. tablet, smartfón, tlačiareň).</p> 
+		<p>V tejto kapitole si ukážeme, ako definovať kaskádové štýly a ako ich vložiť do webovej stránky. Pomocou kaskádových štýlov nastavíme farby pozadia a textu a veľkosť písma.</p>
+		<p>Budeme vychádzať zo súboru index.html v priečinku 03.</p>
+		<p><strong>Úloha 3.1:</strong> Otvorte si online html editor na stránke <a href="https://jsfiddle.net/">https://jsfiddle.net/</a>. Do okna HTML skopírujte obsah elementu &lt;body&gt;body> zo súboru 03/index.html. Do okna CSS vložte nasledujúci kód a pozorujte, čo sa udeje:</p>
+	...
+	</section>
+
+	<section id="obrazky">
+		<h2>4 Obrázky</h2>
+		<h3>Vkladanie obrázka do webového dokumentu</h3>
+		<p>Bežnou súčasťou webových stránok sú obrázky. Pridáme na webovú stránku našej virtuálnej pizzerie jej logo, t.j. nejaký obrázok zo súboru. Použijeme obrázok logo.gif, ktorý máme pripravený v priečinku 04.</p>
+		<p><strong>Príklad 4.1:</strong> Do zdrojového kódu stránky IT Pizza, pod element &lt;h1&gt;, pridajme nasledujúci kód: &lt;img src="logo.gif" alt="logo"&gt;</p>
+		<p><strong>Úloha 4.2:</strong></p>
+		<ul>
+			<li>Zmeňte v elemente &lt;img&gt; názov obrázkového súboru logo.gif na logo2.png. Čo sa stalo?</li>
+			<li>Zmeňte v elemente &lt;img&gt; názov obrázkového súboru logo2.png na logo3.png. Čo sa stalo?</li>
+			<li>Zrušte v elemente &lt;img&gt; nastavenie alt="logo". Aký efekt to malo na stránke?</li>
+			<li>Opravte element &lt;img&gt; na pôvodnú verziu z príkladu 4.1.</li>
+			<li>Povedzte vlastnými slovami, aký význam majú nastavenia src a alt?</li>
+		</ul>
+		...
+		<h3>Atribúty elementu img</h3>
+		<h4>Atribút src</h4>
+		<p>Povinným atribútom elementu <img> je atribút src. Hodnotou atribútu je tzv. cesta k obrázku, napr. "logo.gif", alebo "obrazky/logo.gif", ale napr. aj "http://oi.sk/oi/oi-logo.gif". Cesta k obrázku definuje jeho umiestnenie na počítači (niečo ako adresa, t.j. v ktorom priečinku, podpriečinku, atď. sa obrázok nachádza). Cesta môže byť daná absolútne alebo relatívne. Podrobnejšie informácie o relatívnom a absolútnom adresovaní sú uvedené v kapitole Relatívne a absolútne adresovanie. </p>
+		<p><strong>Príklad 4.5:</strong> Obrázky (či iné súbory), ktoré patria k stránke, sa zvyknú ukladať do samostatného priečinka, resp. priečinkov. Vytvorme v priečinku so súborom index.html nový priečinok obrazky a presťahujme do neho všetky doteraz použité obrázkové súbory (logo, obrázky jednotlivých pízz).</p>
+		...
+		<h4>Atribút alt</h4>
+		<p>Ďalším povinným atribútom elementu <img> je alt. Tento atribút obsahuje alternatívnu textovú informáciu, ktorá sa zobrazí vtedy, ak sa nezobrazí obrázok. Je dôležitá napr. pre hendikepovaných, alebo pre zariadenia, ktoré obrázky nezobrazujú (vyhľadávače, čítače obrazoviek pre nevidiacich, atď.). Neslúži na zobrazovanie informácie v bublinovej nápovede. K tomu slúži iný atribút (pozri ďalej).</p>
+		<p><strong>Úloha 4.6:</strong> Skontrolujte, či všetky obrázky na stránke IT Pizza majú nastavený atribút alt. Ak nie, doplňte ho.</p>
+		...
+	</section>
+	
+	<section id="odkazy">
+	<h2>5 Odkazy a navigácia</h2>
+	<p>Odkazy nájdeme takmer na všetkých stránkach. Používame ich na prepojenie jednotlivých webových dokumentov. Prepájať môžeme:</p>
+	<ul>
+		<li>stránky z rôznych webových sídel: napr. keď kliknutím na odkaz zo stránky Google odskočíme na stránku školy a z nej sa zase kliknutím na odkaz dostaneme napr. na Facebook</li>
+		<li>rôzne stránky v rámci toho istého webového sídla: z hlavnej stránky školy sa dostaneme napr. na stránku s rozvrhom, stránku so zoznamom učiteľov, stránku s fotogalériou školy</li>
+		<li>jednotlivé časti v rámci tej istej stránky:  …</li>
+	</ul>
+	<p>Odkaz je po “technickej” stránke text alebo obrázok, na ktorý sa dá kliknúť a po kliknutí na ktorý sa dostaneme na iný webový dokument alebo inú časť toho istého dokumentu.</p>
+	</section>
+	
+	<aside>			
+		<div>Sponzor 1</div>
+		<div>Sponzor 2</div>
+		<div>Sponzor 3</div>
+		<div>Sponzor 4</div>
+	</aside>			
+	
+	<footer>
+		<div>Zdroje: <a href="w3schools.com">w3schools.com</a>, <a href="https://htmlreference.io/">HTML reference</a>, <a href="https://dev.w3.org/html5/html-author/">HTML5 reference</a>, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Learning HTML: Guides and tutorials</a></div>
+		<div>&copy; Akadémia vzdelávania, 2018</div>
+	</footer>
+</body>
+</html>

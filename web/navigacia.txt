@@ -1,0 +1,12 @@
+nav a {
+  background-color: #e6e6ff;
+  padding: 10px;    
+}
+
+nav a:hover {
+  background-color: wheat;
+}
+
+<nav>
+  <a href="#">vitamín A</a> <a href="#">vitamín B - tiamín</a> <a href="#">vitamín C</a> <a href="#">vitamín D</a> <a href="#">vitamín E</a>
+</nav>

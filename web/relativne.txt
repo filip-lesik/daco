@@ -1,0 +1,6 @@
+<body>
+    <h1>Informatické súae</h1>
+    <h2>Palma</h2>
+    <div>zameranie: programovanie</div>
+    <p>Súa je urèená študentom SŠ. Organizuje ju Prírodovedecká fakulta UPJŠ v Košiciach a zdruenie STROM.</p>
+</body>

@@ -1,0 +1,26 @@
+  <h1>Informatické súae</h1>
+  <section>
+    <h2>Palma</h2>
+    <div>zameranie: programovanie</div>
+    <p>Súa je urèená študentom SŠ. Organizuje ju Prírodovedecká fakulta UPJŠ v Košiciach a zdruenie STROM.</p>
+  </section>
+  <section>
+    <h2>ISTROBOT</h2>
+    <div>zameranie: robotika</div>
+    <p>Ide o súa robotov v rôznych kategóriách. Koná sa kadoroène v Bratislave.</p>
+  </section>
+  <section>
+    <h2>iBobor</h2>
+    <div>zameranie: všeobecné</div>
+    <p>Cie¾om súae je podpori záujem o informaèné a komunikaèné technológie u všetkıch iakov.</p>
+  </section>
+  <section>
+    <h2>Olympiáda v informatike</h2>
+    <div>zameranie: programovanie, algoritmizácia</div>
+    <p>Predmetová olympiáda. Kategória A pre ZŠ aj SŠ, kategória B len pre SŠ.</p>
+  </section>
+  <section>
+    <h2>Korešpondenènı seminár z programovania</h2>
+    <div>zameranie: programovanie</div>
+    <p>Súa v riešení algoritmickıch úloh, urèená pre iakov strednıch škôl.</p>
+  </section>
